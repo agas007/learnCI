@@ -9,6 +9,6 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    <h1>Ini menu Transaksi</h1>
+    <h1>Selamat datang di menu transaksi</h1>
 </div>
 <?= $this->endSection(); ?>
