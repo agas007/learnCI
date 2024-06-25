@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid mb-4">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SIMONA</a>
@@ -24,6 +24,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/tiket">Tiket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users">Users</a>
                     </li>
                 </ul>
             </div>
