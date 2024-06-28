@@ -56,6 +56,13 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
 
-        $usersModel = new UsersModel();
+
+    }
+
+    protected $usersModel;
+
+    public function __construct()
+    {
+        $this->usersModel = new UsersModel();
     }
 }

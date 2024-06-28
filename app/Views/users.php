@@ -11,33 +11,30 @@
 
 <div class="container">
     <h1 class="mt-2">Users</h1>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
             <tr>
-                <th scope="col">Nomor</th>
-                <th scope="col">Username</th>
-                <th scope="col">Nama</th>
-                <th scope="col">NIP</th>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Nama</th>
+                <th>NIP</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
+            <?php if (!empty($users) && is_array($users)) : ?>
+                <?php foreach ($users as $user) : ?>
+                    <tr>
+                        <td><?= esc($user['id']) ?></td>
+                        <td><?= esc($user['username']) ?></td>
+                        <td><?= esc($user['nama']) ?></td>
+                        <td><?= esc($user['nip']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <tr>
+                    <td colspan="3">No users found</td>
+                </tr>
+            <?php endif; ?>
         </tbody>
     </table>
 </div>
